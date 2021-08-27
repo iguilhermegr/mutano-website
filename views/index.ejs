@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="pt-BR">
+    <title><%- bot.user.username %>・Apenas um bot para Discord</title>
+    <meta name="robots" content="all">
+
+    <meta property="og:type" content="page">
+
+    <meta property="article:author" content="Discord Bot">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mutanobot.site">
+    <meta name="twitter:title" content="<%- bot.user.username %>・Apenas um bot para Discord">
+    <meta name="twitter:creator" content="@guihrib">
+    <meta name="twitter:description" content="Um bot simples tentando trazer o melhor sendo multifuncional para seu servidor e feito em Aoi.js">
+    <meta name="theme-color" content="#1aff17" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="#1aff17" />
+      <meta name="msapplication-navbutton-color" content="#1aff17" />
+      <meta name="author" content="guih rib" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="<%- bot.avatar %>" type="image/x-icon" />
+      <meta name="keywords" content="bot,botdiscord,bot discord,bot do discord,melhor bot para discord,discord bots, mutano,mutano bot,mutanobot,mutano™,gr,gr rib,gr_rib,guih rib,guihrib,best bot of discord,discord,dashboard,social,economy,botlist,fun,moderation,teentitans,teen titans,titans,jovens titas,jovenstitas,jovens titãs,titãs,beastboy,beast boy,bb,ravena,raven,rae,discord server,servidor discord,mutano bot discord,mutano bot site,mutano site,mutano bot website,mutano website, mutanobot.site, mutano empresa, mutano.inc, mutano suporte, mutano support, guilherme ribeiro, gr dev, dev mutano, developer mutano, mutano community, mutano bot list, mutano botlist, mutano help, help" />
+      <meta property="og:image" content="<%- bot.avatar %>" />
+      <meta property="og:site_name" content="Discord Bot" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://mutanobot.site/" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+      <meta
+      name="description"
+      content="Um bot simples tentando trazer o melhor sendo multifuncional para seu servidor e feito em Aoi.js" />
+      <meta property="og:title" content="Mutano™・Apenas um bot para Discord" />
+      <meta
+      property="og:description"
+      content="Um bot simples tentando trazer o melhor sendo multifuncional para seu servidor e feito em Aoi.js" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/bob.css">
+    <link rel="stylesheet" href="/body.css">
+    <link rel="stylesheet" href="/table.css">
+    <link rel="stylesheet" href="/cards.css">
+    <link rel="stylesheet" href="/counter.css">
+    <link rel="stylesheet" href="/colors.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-204958629-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-204958629-1');
+</script>
+  </head>
+  <body style="background-color: var(--dc);">
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: var(--dc);">
+        <a class="navbar-brand" href="">
+          <img src="<%- bot.avatar %>" width="30" height="30" class="rounded d-inline-block align-top" alt="">
+            <div style="margin-top: -1.5em; margin-left: 2em; color: white;">
+              <%- bot.user.username %>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <b><a class="nav-link" style="color: white; margin-top: -9px; font-size: 2em;" href="/"><img src="https://media.discordapp.net/attachments/757053078175219813/829097513381789736/home.png?width=25&height=25" style="width: 25px; height: 25px;"/></a></b>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="/comandos">Comandos</a>
+            </li> -->
+            <% if(user) { %>
+              <!-- <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="/dashboard">Dashboard</a>
+              </li> -->
+            <% } else { %>
+            <% } %>
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+            <% if(user) { %>
+              <div class="btn-group">
+                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: var(--dc); color: white;">
+                  <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar %>.png?size=4096" alt="..." class="rounded-circle" style="height: 30px;">
+                  <%- user.username %>
+                </button>
+              </div>
+            <% } else { %>
+              <div class="btn-group">
+                <a href="/discord/oauth2">
+                  <button type="button" class="btn" style="background-color: var(--green); color: white;">
+                    Login
+                  </button>
+                </a>
+              </div>
+            <% } %>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="initial_bar" style="width: 100%; height: 8px; background-color: var(--bb);"></div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="tableModel">
+      <center>
+          <div class="bob">
+            <img src="<%- bot.avatar %>" alt="..." class="rounded-circle" style="height: 300px; pointer-events: none; -webkit-box-shadow: 9px 7px 46px 0px rgba(0,0,0,0.80); box-shadow: 9px 7px 46px 0px rgba(0,0,0,0.80);">
+          </div>
+        <br>
+        <br>
+        <br>
+          <h2 class="card-title" style="color: white; font-size: 275%"><strong><%- bot.user.username %></strong></h2>
+          <h2 class="card-title" style="color: white; padding: 8px; font-size: 235%"><strong>O Um bot simples tentando trazer o melhor sendo multifuncional para seu servidor e feito em Aoi.js</strong></h2>
+      </center>
+    </div>
+
+    <br>
+    <br>
+
+      <div class="tableModel">
+        <center>
+            <a href="/convite" target="_black">
+              <button type="button"class="btn" style="background-color: color: #3B32EF;">Me adicione!</button>
+            </a>
+            <a href="/discord" target="_black">
+              <button type="button" class="btn" style="background-color: color: #3B32EF;">Servidor de Suporte</button>
+            </a>
+            <!-- <a href="" target="_black">
+              <button type="button" class="btn" style="background-color: color: #3B32EF;">Vote em mim!</button>
+            </a> -->
+        </center>
+      </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+      <div class="cards">
+        <center>
+          <div class="card" style="width: 18rem; background-color: #1ad46d;">
+            <div class=""><br>
+              <center>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-hdd-rack-fill" viewBox="0 0 16 16">
+                  <path d="M2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1v2H2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1V7h1a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-2 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM12 7v2H4V7h8z"/>
+                </svg>
+              </center>
+            </div>
+            <div class="card-body">
+              <p class="card-title" style="font-size: 100%; color: #3B32EF"><strong>Total de Servidores</strong></p>
+              <p class="card-title"><div class="counter" style="color: #3B32EF;"><%- info.servidores %></div></p>
+            </div>
+          </div>
+        </center>
+        <center>
+          <div class="card" style="width: 18rem; background-color: #1ad46d;">
+            <div class=""><br>
+              <center>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                </svg>
+              </center>
+            </div>
+            <div class="card-body">
+              <p class="card-title" style="font-size: 100%; color: #3B32EF"><strong>Total de Usuários</strong></p>
+              <p class="card-title"><div class="counter" style="color: #3B32EF;"><%- info.users %></div></p>
+            </div>
+          </div>
+        </center>
+        <center>
+          <div class="card" style="width: 18rem; background-color: #1ad46d;">
+            <div class=""><br>
+              <center>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-terminal-fill" viewBox="0 0 16 16">
+                  <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z"/>
+                </svg>
+              </center>
+            </div>
+            <div class="card-body">
+              <p class="card-title" style="font-size: 100%; color: #3B32EF"><strong>Total de Comandos</strong></p>
+              <p class="card-title"><div class="counter" style="color: #3B32EF;">45</div></p>
+            </div>
+          </div>
+        </center>
+      </div>
+
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "oauth2": {
+    "clientID": "763109929300262953",
+    "clientSecret": "5vJxlZgDGODgLRMj6Vrqj9ZqdNHUdWD9",
+    "callbackURL": "https://mutanobot.site/discord/callback",
+    "scope": ["guilds", "identify", "guilds.join"],
+    "prompt": "consent"
+  }
+}
